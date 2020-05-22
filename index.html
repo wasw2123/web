@@ -30,6 +30,11 @@
               })
           })
     }
+    if(location.hash){
+      fetchpage(location.hash.substr(2));
+    } else {
+      fetchpage('welcome');
+    }
   </script>
 </body>
 </html>
