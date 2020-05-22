@@ -35,6 +35,10 @@
     }
     fetch('list').then(function(response){
               response.text().then(function(text){
+                  //<li><a href="#!html" onclick="fetchpage('html')">HTML</a></li>
+                  console.log(text);
+                  var items = text.split(',')
+                  console.log(items);
                   document.querySelector('#nav').innerHTML = text;
               })
             });
