@@ -44,7 +44,7 @@
                   while(i<items.length){
                     var item = items[i];
                     //<li><a href="#!html" onclick="fetchpage('html')">HTML</a></li>
-                    var tag = '<li>'+item+'</li>'
+                    var tag = '<li><a href="#!'+item+'" onclick="fetchpage(\''+item+'\')">'+item+'</a></li>'
                     tags = tags + tag;
                     i = i + 1;
                   }
