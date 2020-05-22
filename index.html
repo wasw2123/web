@@ -14,10 +14,8 @@
   <input id="night_day" type="button" value="night" onclick="
     nightDayHandler(this);
   ">
-  <ol>
-    <li><a href="#!html" onclick="fetchpage('html')">HTML</a></li>
-    <li><a href="#!css" onclick="fetchpage('css')">CSS</a></li>
-    <li><a href="#!javascript" onclick="fetchpage('javascript')">JavaScript</a></li>
+  <ol id="nav">
+    
   </ol>
   <article>
 
@@ -35,6 +33,10 @@
     } else {
       fetchpage('welcome');
     }
+    fetch('list').then(function(response){
+              response.text().then(function(text){
+                  document.querySelector('#nav').innerHTML = text;
+              })
   </script>
 </body>
 </html>
